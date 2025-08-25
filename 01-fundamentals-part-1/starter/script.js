@@ -88,95 +88,156 @@
 //////////////////////////////////////
 // JavaScript Fundamentals - Hour 2
 // Basic Operators
-console.log("=== MATH OPERATORS ===");
+// console.log("=== MATH OPERATORS ===");
 
-const now = 2025;
-const ageVan = now - 2005;
-const ageSaint = now - 1995;
-console.log(ageVan, ageSaint); // 20, 30
+// const now = 2025;
+// const ageVan = now - 2005;
+// const ageSaint = now - 1995;
+// console.log(ageVan, ageSaint); // 20, 30
 
-console.log(ageVan * 2, ageSaint / 10, 2 ** 3); // 40, 3, 8
+// console.log(ageVan * 2, ageSaint / 10, 2 ** 3); // 40, 3, 8
 // 2 ** 3 means 2 raised to the power of 3 (2^3)
 
 // All Operators
-console.log("Math operataions:");
-console.log("Addition:", 10 + 5); // 15
-console.log("Subtraction:", 20 - 8); // 12
-console.log("Multiplication:", 4 * 7); // 28
-console.log("Division:", 15 / 3); // 5
-console.log("Exponentiation:", 2 ** 3); // 8
+// console.log("Math operataions:");
+// console.log("Addition:", 10 + 5); // 15
+// console.log("Subtraction:", 20 - 8); // 12
+// console.log("Multiplication:", 4 * 7); // 28
+// console.log("Division:", 15 / 3); // 5
+// console.log("Exponentiation:", 2 ** 3); // 8
 
 // Math with Strings
-const firstName = "Van";
-const lastName = "Arbes";
-console.log( firstName + " " + lastName); // "Van Arbes"
+// const firstName = "Van";
+// const lastName = "Arbes";
+// console.log( firstName + " " + lastName); // "Van Arbes"
 
-console.log("Hello " + "World" + "!"); // "Hello World!"
-console.log("I am " + 20 + " years old"); // "I am 20 years old"
+// console.log("Hello " + "World" + "!"); // "Hello World!"
+// console.log("I am " + 20 + " years old"); // "I am 20 years old"
 // Plus (+) joins strings together
 
 // Assignment Operators
-console.log("=== ASSIGNMENT OPERATORS ===");
+// console.log("=== ASSIGNMENT OPERATORS ===");
 
-let x = 10 + 5; 
-console.log("x starts as:", x);
+// let x = 10 + 5; 
+// console.log("x starts as:", x);
 
-x += 10; 
-console.log("x starts as:", x);
+// x += 10; 
+// console.log("x starts as:", x);
 
-x *= 4;
-console.log("x starts as:", x);
+// x *= 4;
+// console.log("x starts as:", x);
 
-x /= 2;
-console.log("x starts as:", x);
+// x /= 2;
+// console.log("x starts as:", x);
 
-x++;
-console.log("x starts as:", x);
+// x++;
+// console.log("x starts as:", x);
 
-x--;
-console.log("x starts as:", x);
+// x--;
+// console.log("x starts as:", x);
 
 // Comparison Operators
-console.log("=== COMPARISON OPERATORS ===");
+// console.log("=== COMPARISON OPERATORS ===");
 
-console.log("Age Comparison:");
-console.log(ageVan > ageSaint); // false 
-console.log(ageVan >= 18); // true 
-console.log(ageVan < 30); // true 
+// console.log("Age Comparison:");
+// console.log(ageVan > ageSaint); // false 
+// console.log(ageVan >= 18); // true 
+// console.log(ageVan < 30); // true 
 
-console.log("Number Comparison:");
-console.log(25 > 20); // true
-console.log(15 < 10); // false
-console.log(18 >= 18); // true
-console.log(16 <= 15); // false
+// console.log("Number Comparison:");
+// console.log(25 > 20); // true
+// console.log(15 < 10); // false
+// console.log(18 >= 18); // true
+// console.log(16 <= 15); // false
 
-const isFullAge = ageVan >= 18;
-console.log("Van is adult", isFullAge); // true
+// const isFullAge = ageVan >= 18;
+// console.log("Van is adult", isFullAge); // true
 
-console.log("Complex Comparison:");
-console.log(now - 2005 > now - 1995); // false (Same as: ageVan > ageSaint)
+// console.log("Complex Comparison:");
+// console.log(now - 2005 > now - 1995); // false (Same as: ageVan > ageSaint)
 
-let z, y;
-z = y = 25 - 10 - 5; 
-console.log(z, y); // 10, 10
+// let z, y;
+// z = y = 25 - 10 - 5; 
+// console.log(z, y); // 10, 10
 
 // Parentheses
-const averageAge = (ageVan + ageSaint) / 2;
-console.log(ageVan, ageSaint, averageAge); // 20, 30, 25
+// const averageAge = (ageVan + ageSaint) / 2;
+// console.log(ageVan, ageSaint, averageAge); // 20, 30, 25
 
 // Coding Challenge #1 - BMI Calculator
 // Test Data 1
-const massMark = 78; 
-const heightMark = 1.69; 
-const massJohn = 92;
-const heightJohn = 1.95; 
+// const massMark = 78; 
+// const heightMark = 1.69; 
+// const massJohn = 92;
+// const heightJohn = 1.95; 
 
 // Solution
+// const BMIMark = massMark / heightMark ** 2;
+// console.log("Mark's BMI:", BMIMark); // 27.309968138370508
+
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
+// console.log("John's BMI:", BMIJohn); // 24.194608809993426
+
+// const markHigherBMI = BMIMark > BMIJohn;
+
+//////////////////////////////////////
+// JavaScript Fundamentals - Hour 3
+// Strings and Template Literals
+
+const firstName = "Van";
+const job = "Software Engineer";
+const birthYear = 2005;
+const year = 2025;
+
+const van = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+console.log(van); 
+
+// Modern way (recommended)
+const vanNew = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`;
+console.log(vanNew); 
+
+// Any expression can be used inside the ${}
+console.log(`I'm ${2025 - 2005} years old`);
+console.log(`Math works here: ${2 + 3} equals five`);
+console.log(`Comparisons too: ${5 > 3}`);
+
+// You can use backtricks (``) for any string
+console.log(`Just a regular string...`);
+
+// if else statement
+const age = 20;
+
+if (age >= 18) {
+    console.log(`Van can start driving license`);
+    } else {
+    const yearsLeft = 18 - age;
+    console.log(`Van is too young. Wait another ${yearsLeft} years :)`);
+    }
+
+// Truthy and Falsy Values
+// 5 falsy values
+console.log(Boolean(0)); // falsy values
+console.log(Boolean(undefined)); // falsy values
+console.log(Boolean("Van")); // truthy values
+console.log(Boolean({})); // truthy values
+console.log(Boolean("")); // falsy values
+
+// Coding Challenge #2 - BMI Comparison with if/else
+// Reuse your BMI calculation from Challenge #1
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
 const BMIMark = massMark / heightMark ** 2;
-console.log("Mark's BMI:", BMIMark); // 27.309968138370508
-
 const BMIJohn = massJohn / (heightJohn * heightJohn);
-console.log("John's BMI:", BMIJohn); // 24.194608809993426
+console.log(BMIMark, BMIJohn);
 
-const markHigherBMI = BMIMark > BMIJohn;
-
+// Your if/else statement here:
+// Compare BMIs and create intelligent messages
+// Use template literals for beautiful output
+if (BMIMark > BMIJohn) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
+} else {
+    console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
+}
