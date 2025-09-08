@@ -210,31 +210,240 @@ const grades = [78, 85, 92, 67, 88, 95, 73, 82];
 console.log(grades);
 
 // Function to calculate average
-let total = 0;
-for (let i = 0; i < grades.length; i++) {
-    total += grades[i];
-}
-const average = total / grades.length;
-console.log(`Average grade: ${average.toFixed(2)}`);
+// let total = 0;
+// for (let i = 0; i < grades.length; i++) {
+//     total += grades[i];
+// }
+// const average = total / grades.length;
+// console.log(`Average grade: ${average.toFixed(2)}`);
 
-// Function to find highest grade
-let highest = grades[0];
-grades.forEach((grade) => {
-    if (grade > highest) highest = grade;
-});
-console.log(`Highest grade: ${highest}`);
+// // Function to find highest grade
+// let highest = grades[0];
+// grades.forEach((grade) => {
+//     if (grade > highest) highest = grade;
+// });
+// console.log(`Highest grade: ${highest}`);
 
-// Function to find lowest grade
-let lowest = grades[0];
-grades.forEach((grade) => {
-    if (grade < lowest) lowest = grade;
-});
-console.log(`Lowest grade: ${lowest}`);
+// // Function to find lowest grade
+// let lowest = grades[0];
+// grades.forEach((grade) => {
+//     if (grade < lowest) lowest = grade;
+// });
+// console.log(`Lowest grade: ${lowest}`);
 
-// Function to count passing students
-let passedCount = 0;
-grades.forEach((grade) => {
-    if (grade >= 70) passedCount++;
-});
-console.log(`${passedCount} out of ${grades.length} students passed`);
+// // Function to count passing students
+// let passedCount = 0;
+// grades.forEach((grade) => {
+//     if (grade >= 70) passedCount++;
+// });
+// console.log(`${passedCount} out of ${grades.length} students passed`);
+
+////////////////////////////////////
+// JavaScript Fundamentals Part 2 - Hour 3
+
+// Problems with Arrays
+// const vanArray = [
+//     "Van",
+//     "Arbes",
+//     2025 - 2005,
+//     "teacher",
+//     ["Michael", "Peter", "Steven"], 
+// ];
+// console.log(vanArray[0]); // First Name
+// console.log(vanArray[1]); // Last Name
+// console.log(vanArray[2]); // Age
+
+// const vanObject = {
+//     firstName: "Van",
+//     lastName: "Arbes",
+//     age: 2025 - 2005,
+//     job: "Software Engineer",
+//     friends: ["Michael", "Peter", "Steven"]
+// };
+// console.log(vanObject);
+
+// // Property access methods
+// // Dot Notation
+// console.log(vanObject.firstName);
+// console.log(vanObject.lastName);
+// console.log(vanObject.age);
+
+// // Bracket Notation
+// console.log(vanObject["firstName"]);
+// console.log(vanObject["lastName"]);
+// console.log(vanObject["age"]);
+
+// const nameKey = "Name";
+// console.log(vanObject["first" + nameKey]);
+// console.log(vanObject["last" + nameKey]);
+
+// // Modifying existing properties
+// vanObject.job = "Programmer";
+// vanObject["age"] = 21;
+// console.log(vanObject);
+
+// // Add new properties
+// vanObject.location = "Philippines";
+// vanObject["twitter"] = "@vanarbes";
+// vanArray.hasDriverLicense = false;
+// console.log(vanObject);
+
+// // Arrays
+// const listofYears = [1991, 2005, 2008, 2020];
+// const shoppingList = ["apples", "bananas", "milk", "bread"];
+// const testScores = [85, 92, 78, 96];
+
+// // Object
+// const person = {
+//     name: "Van",
+//     age: 20,
+//     occupation: "Software Engineer",
+// };
+// const car = {
+//     brand: "Toyota",
+//     model: "Camry",
+//     year: 2020,
+//     color: "Blue",
+// };
+
+// // Objects can contain arrays, arrays can contain objects
+// const student = {
+//     name: "Van",
+//     grades: [85, 92, 78],
+//     address: {
+//         street: "123 Main St",
+//         city: "New York",
+//     },
+// };
+// console.log(student.grades[0]);
+// console.log(student.address.city);
+
+// // Object Methods
+// const van = {
+//     firstName: "Van",
+//     lastName: "Arbes",
+//     birthYear: 2005,
+//     job: "Software Engineer",
+//     friends: ["Michael", "Peter", "Steven"],
+//     hasDriverLicense: false,
+
+//     calcAge: function(birthYear) {
+//         return 2025 - birthYear;
+//     },
+// };
+// console.log(van.calcAge(2005));
+
+// // 'This' keyword
+// const vanImproved = {
+//     firstName: "Van",
+//     lastName: "Arbes",
+//     birthYear: 2005,
+//     job: "Software Engineer",
+//     friends: ["Michael", "Peter", "Steven"],
+//     hasDriverLicense: false,
+
+//     calcAge: function() {
+//         this.age = 2025 - this.birthYear;
+//         return this.age;
+//     },
+
+//     getSummary: function () {
+//         return `${this.firstName} is a ${this.calcAge() }-year old ${this.job}, 
+//         and he has ${this.hasDriverLicense ? "a" : "no"} drivers license`;
+//     },
+// };
+// console.log(vanImproved.calcAge());
+// console.log(vanImproved.age);
+// console.log(vanImproved.getSummary());
+
+// // Complex object with multiple methods
+// const bankAccount = {
+//     owner: "John Doe",
+//     movements: [200, 450, -400, 3000, -650 , -130, 70, 1300],
+//     interestRate: 1.2,
+//     pin: 1111,
+
+// // Method to calculate balance
+// calcBalance: function () {
+//     this.balance = this.movements.reduce((acc, mov) => acc + mov, 0);
+//     return this.balance;
+//   },
+
+// // Method to add movement
+// deposit: function(amount) {
+//     this.movements.push(amount);
+//     this.calcBalance();
+//   },
+
+// withdraw: function (amount) {
+//     this.movements.push(-amount);
+//     this.calcBalance();
+//   },
+
+// // Method for account summary
+// getStatement: function () {
+//     return `${this.owner}'s account balance: ${this.calcBalance()}`;
+//   },
+// };
+// console.log(bankAccount.getStatement());
+// bankAccount.deposit(500);
+// console.log(bankAccount.getStatement());
+
+////////////////////////////////////
+// Coding Challenge #3 
+
+const user = {
+  firstName: "Van",
+  lastName: "Arbes",
+  birthYear: 2005,
+  location: "Philippines",
+  interests: ["watching", "travel", "singing"],
+  friends: [
+    { name: "Michael", status: "active" },
+    { name: "Emma", status: "inactive" },
+    { name: "David", status: "active" },
+  ],
+  isActive: true,
+
+  // Calculate age method
+  calcAge: function () {
+    const currentYear = new Date().getFullYear();
+    this.age = currentYear - this.birthYear;
+  },
+  
+  // Add friend method
+  addFriend: function (name, status = "active") {
+    this.friends.push({ name, status });
+    return this.friends.length;
+  },
+
+  // Get active friends count
+  getActiveFriends: function () {
+    const activeFriends = this.friends.filter(friend => friend.status === "active")
+    return activeFriends.length;
+    },
+
+  // Toggle active status
+  toggleStatus: function () {
+    this.isActive = !this.isActive;
+    return this.isActive;
+  },
+
+  // Generate profile summary
+  getSummary: function () {
+    const age = this.calcAge();
+    const activeFriends = this.getActiveFriends();
+    const status = this.active ? "active" : "inactive";
+    return `${this.firstName} ${this.lastName} (${this.age}) from ${this.location}
+    Currently ${status} 
+    ${activeFriends} active friends out of ${this.friends.length} total
+    Interest: ${this.interests.join(", ")}
+    Connected and sharing life's adventure`;
+  },
+};
+console.log(user.getSummary());
+user.addFriend("Alex", "active");
+user.toggleStatus();
+console.log(`\nAfter updates:`);
+console.log(user.getSummary());
 
