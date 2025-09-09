@@ -83,6 +83,7 @@
 // console.log(glovalVar);
 // console.log(localVar); 
 
+
 ////////////////////////////////////
 // Coding Challenge #1
 
@@ -101,6 +102,8 @@
 //         return "No team wins! Dolphins: ${avgDolphins}, Koalas: ${avgKoalas}";
 //     }
 // }
+
+
 
 ////////////////////////////////////
 // JavaScript Fundamentals Part 2 - Hour 2
@@ -203,11 +206,12 @@
 // }); 
 // console.log(`${passedCount} out of ${grades.length} students passed`);  
 
+
 ////////////////////////////////////
 // Coding Challenge #2
 
-const grades = [78, 85, 92, 67, 88, 95, 73, 82];
-console.log(grades);
+// const grades = [78, 85, 92, 67, 88, 95, 73, 82];
+// console.log(grades);
 
 // Function to calculate average
 // let total = 0;
@@ -237,6 +241,8 @@ console.log(grades);
 //     if (grade >= 70) passedCount++;
 // });
 // console.log(`${passedCount} out of ${grades.length} students passed`);
+
+
 
 ////////////////////////////////////
 // JavaScript Fundamentals Part 2 - Hour 3
@@ -389,61 +395,157 @@ console.log(grades);
 // bankAccount.deposit(500);
 // console.log(bankAccount.getStatement());
 
+
 ////////////////////////////////////
 // Coding Challenge #3 
 
-const user = {
-  firstName: "Van",
-  lastName: "Arbes",
-  birthYear: 2005,
-  location: "Philippines",
-  interests: ["watching", "travel", "singing"],
-  friends: [
-    { name: "Michael", status: "active" },
-    { name: "Emma", status: "inactive" },
-    { name: "David", status: "active" },
-  ],
-  isActive: true,
+// const user = {
+//   firstName: "Van",
+//   lastName: "Arbes",
+//   birthYear: 2005,
+//   location: "Philippines",
+//   interests: ["watching", "travel", "singing"],
+//   friends: [
+//     { name: "Michael", status: "active" },
+//     { name: "Emma", status: "inactive" },
+//     { name: "David", status: "active" },
+//   ],
+//   isActive: true,
 
-  // Calculate age method
-  calcAge: function () {
-    const currentYear = new Date().getFullYear();
-    this.age = currentYear - this.birthYear;
-  },
+//   // Calculate age method
+//   calcAge: function () {
+//     const currentYear = new Date().getFullYear();
+//     this.age = currentYear - this.birthYear;
+//   },
   
-  // Add friend method
-  addFriend: function (name, status = "active") {
-    this.friends.push({ name, status });
-    return this.friends.length;
-  },
+//   // Add friend method
+//   addFriend: function (name, status = "active") {
+//     this.friends.push({ name, status });
+//     return this.friends.length;
+//   },
 
-  // Get active friends count
-  getActiveFriends: function () {
-    const activeFriends = this.friends.filter(friend => friend.status === "active")
-    return activeFriends.length;
-    },
+//   // Get active friends count
+//   getActiveFriends: function () {
+//     const activeFriends = this.friends.filter(friend => friend.status === "active")
+//     return activeFriends.length;
+//     },
 
-  // Toggle active status
-  toggleStatus: function () {
-    this.isActive = !this.isActive;
-    return this.isActive;
-  },
+//   // Toggle active status
+//   toggleStatus: function () {
+//     this.isActive = !this.isActive;
+//     return this.isActive;
+//   },
 
-  // Generate profile summary
-  getSummary: function () {
-    const age = this.calcAge();
-    const activeFriends = this.getActiveFriends();
-    const status = this.active ? "active" : "inactive";
-    return `${this.firstName} ${this.lastName} (${this.age}) from ${this.location}
-    Currently ${status} 
-    ${activeFriends} active friends out of ${this.friends.length} total
-    Interest: ${this.interests.join(", ")}
-    Connected and sharing life's adventure`;
-  },
-};
-console.log(user.getSummary());
-user.addFriend("Alex", "active");
-user.toggleStatus();
-console.log(`\nAfter updates:`);
-console.log(user.getSummary());
+//   // Generate profile summary
+//   getSummary: function () {
+//     const age = this.calcAge();
+//     const activeFriends = this.getActiveFriends();
+//     const status = this.active ? "active" : "inactive";
+//     return `${this.firstName} ${this.lastName} (${this.age}) from ${this.location}
+//     Currently ${status} 
+//     ${activeFriends} active friends out of ${this.friends.length} total
+//     Interest: ${this.interests.join(", ")}
+//     Connected and sharing life's adventure`;
+//   },
+// };
+// console.log(user.getSummary());
+// user.addFriend("Alex", "active");
+// user.toggleStatus();
+// console.log(`\nAfter updates:`);
+// console.log(user.getSummary());
+
+
+
+////////////////////////////////////
+// JavaScript Fundamentals Part 2 - Hour 4
+
+// querySelector - uses css selectors
+// const message = document.querySelector(".message");
+// // gets us the entire element object with all its properties
+// console.log(message);
+
+// const button = document.querySelector("#btn");
+// console.log(button);
+
+// const heading = document.querySelector("h1");
+// console.log(heading);
+// //query selector returns the first matching elements
+
+// console.log(message.textContent);
+// console.log(button.id);
+// console.log(heading.tagName);
+// console.log(heading.textContent);
+
+// // getElementByID
+// const buttonByID = getElementByID("btn");
+// console.log(buttonByID);
+// console.log(buttonByID === button);
+
+// // querySelectorAll - Multiple Elements
+// const allParagraphs = document.querySelectorAll("p");
+// console.log(allParagraphs);
+// console.log(allParagraphs[0]);
+// console.log(allParagraphs.length);
+
+// Modifying element content
+const message = document.querySelector(".message");
+
+// Text Content
+console.log(message.textContent);
+message.textContent = "Hello From JavaScript";
+console.log(message.textContent);
+
+// innerHTML
+message.innerHTML = "<strong>Bold text from JS!</strong>";
+
+// innerText
+console.log(message.innerText);
+
+// Input Element Values
+const input = document.querySelector(".guess");
+console.log(input.value);
+input.value = "Default text";
+
+// Changing element style
+const heading = document.querySelector("h1");
+
+heading.style.color = "red";
+heading.style.backgroundColor = "yellow"
+heading.style.fontSize = "3rem";
+
+const button = document.querySelector("#btn");
+button.style.padding = "20px";
+button.style.borderRadius = "10px";
+
+// Event Listeners - user interactions
+button.addEventListener("click", function() {
+    console.log("Button was clicked!");
+    message.textContent = "You clicked the button";
+    message.style.color = "green";
+});
+
+let clickCount = 0;
+button.addEventListener("click", function() {
+    clickCount++;
+    button.textContent = `Clicked ${clickedCount} times`;
+    button.style.backgrounColor = `hsl(${clickedCount * 30}, 70%, 50% )`;
+});
+
+// Input Events
+const display = document.querySelector(".message");
+input.addEventListener("input", function() {
+    const userText = input.value;
+    display.textContent = `You typed ${userTexT}`;
+    display.style.fontSize = `${userText.length + 10}px`;
+});
+
+// Keyboard events - respond to specific key
+input.addEventListener("keydone", function(event) {
+    console.log(`Key pressed ${event.key}`);
+
+    if (event.key === "Enter") {
+        display.textContent = `You pressed Enter! Text was ${input.value}`;
+        input.value = ""; //clear-input
+    }
+});
 
