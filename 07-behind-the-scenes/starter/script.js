@@ -16,13 +16,31 @@
 // };
 // const addArrow = (a, b) => a + b;
 
+// const person = {
+//     name: 'Jonas',
+//     greet: function() {
+//         console.log(`Hello, I am ${this.name}`);
+//     }
+// };
+// person.greet();
+
+// const anotherPerson = { name: 'Sarah' };
+
+// // borrow greet function
+// anotherPerson.greet = person.greet;
+
+// // display or run the greet function for anotherperson
+// anotherPerson.greet();
+
+// // Dteached function
+// const greetFunction = person.greet;
+// greetFunction();
+
 // const obj = {
 //   name: 'Object',
-
 //   regularMethod: function () {
 //     console.log('Regular:', this.name);
 //   },
-
 //   arrowMethod: () => {
 //     console.log('Arrow:', this.name);
 //   },
@@ -30,9 +48,21 @@
 // obj.regularMethod();
 // obj.arrowMethod();
 
+// Before running, predict the output:
+// const quiz = {
+//   name: 'Quiz Object',
+//   regularMethod() {
+//     console.log('Regular:', this.name);
+//   },
+//   arrowMethod: () => {
+//     console.log('Arrow:', this.name);
+//   },
+// };
+// quiz.regularMethod(); // Predict: ?
+// quiz.arrowMethod(); // Predict: ?
+
 // const timer = {
 //   name: 'Timer',
-
 //   start: function () {
 //     console.log(`${this.name} starting...`);
 //     const self = this;
@@ -41,7 +71,6 @@
 //       console.log(`${self.name} finished`);
 //     }, 1000);
 //   },
-
 //   startModern: function () {
 //     console.log(`${this.name} starting modern...`);
 
@@ -58,11 +87,9 @@
 //     console.log('Arguments length:', arguments.length);
 //     console.log('First argument:', arguments[0]);
 //   },
-
 //   arrowFunction: () => {
 //     console.log('Arrow function called');
 //   },
-
 //   modernFunction: (...args) => {
 //     console.log('Args length:', args.length);
 //     console.log('First arg:', args[0]);
